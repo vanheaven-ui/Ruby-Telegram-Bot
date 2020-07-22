@@ -49,8 +49,7 @@ describe BotHelper do
         /start - start conversation with me
         /stop - stop conversation with me
         /verse - choose this and I will reply with a bible verse
-        /news - choose this and I will reply with the latest 5 US news headlines
-        
+        /news - choose this and I will reply with the latest 5 US news headlines\n
       HERE
     it 'return expected string' do
       expect(helper.when_help).to eq(expected)
