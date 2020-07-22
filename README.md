@@ -1,14 +1,18 @@
-# My Custom Enumerable Methods
+# Ruby Telegram Bot (verse&newsbot)
+
+This project explores the power of ruby to integrate with external resources.
   
-[![View Code](https://img.shields.io/badge/View%20-Code-green)](https://github.com/vanheaven-ui/my_enumerables/tree/my_enumerables)
-[![Github Issues](https://img.shields.io/badge/GitHub-Issues-orange)](https://github.com/vanheaven-ui/my_enumerables/issues)
-[![GitHub Pull Requests](https://img.shields.io/badge/GitHub-Pull%20Requests-blue)](https://github.com/vanheaven-ui/my_enumerables/pulls)
-[![View Code](https://img.shields.io/badge/Github-Author-black)](https://github.com/vanheaven-ui)
+[![View Code](https://img.shields.io/badge/View%20-Code-green)](https://github.com/vanheaven-ui/ruby-telegram-bot/tree/develop)
+[![Github Issues](https://img.shields.io/badge/GitHub-Issues-orange)](https://github.com/vanheaven-ui/ruby-telegram-bot/issues)
+[![GitHub Pull Requests](https://img.shields.io/badge/GitHub-Pull%20Requests-blue)](https://github.com/vanheaven-ui/ruby-telegram-bot/pulls)
+[![Author](https://img.shields.io/badge/Github-Author-black)](https://github.com/vanheaven-ui)
 [![Twitter Follow](https://img.shields.io/badge/Twitter-Ezekiel-%231DA1F2)](https://twitter.com/MworekwaE)
 [![LinkedIn follow](https://img.shields.io/badge/LinkedIn-Ezekiel-%232867B2)](https://www.linkedin.com/in/vanheaven/)
 
-Screen shot
-<img scr="/img/screenshot.jpg">
+## Screenshot of sample verse&newsbot chats
+
+<img src="/img/screenshot.jpg">
+
 ## Content
 
 <a text-align="center" href="#about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
