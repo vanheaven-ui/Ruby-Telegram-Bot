@@ -31,7 +31,7 @@ class BotHelper
 
   def when_help
     <<~HERE
-      I am a bot that is here to take your commands and give you bible verses and the latest BBC news headlines alike.'
+      I am a bot that is here to take your commands and give you bible verses and the latest US news headlines alike.
       #{commands}
     HERE
   end
@@ -49,15 +49,15 @@ class BotHelper
 
   def when_stop(user_name)
     <<~HERE
-    👋Bye! #{user_name},
-      You have ended our chat
+      👋Bye! #{user_name},
+        You have ended our chat
     HERE
   end
 
   def same_command(command)
     <<~HERE
       Enjoy the #{command.sub('/', '')}?
-      Choose #{command} again for updates or
+      Choose #{command} again for another verse or
       Choose from the rest of the commands below
     HERE
   end
@@ -83,3 +83,7 @@ class BotHelper
     token
   end
 end
+
+bot = BotHelper.new
+p bot.when_help
+p bot.commands

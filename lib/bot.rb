@@ -3,6 +3,7 @@ require 'telegram/bot'
 require_relative './helper'
 
 class TelegramBot < BotHelper
+  attr_reader :user_name
   helper = TelegramBot.new
   token = helper.token
   help = helper.when_help
