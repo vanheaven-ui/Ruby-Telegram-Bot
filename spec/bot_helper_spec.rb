@@ -5,7 +5,7 @@ describe BotHelper do
   describe '#when_start' do
     expected =
       <<~HERE
-        🤝Hello again, Vanheaven
+        🤝Hello, #{user_name}
 
         You have officially started our chat.
 
@@ -13,6 +13,8 @@ describe BotHelper do
         /stop - To stop this conversation,
         /verse - To get a special verse
         /news - To get the latest five US news headlines
+        /commands - To load buttons for your commands
+        /help - To get guidance about bot
       HERE
     context 'no argument given' do
       it 'raises ArgumentError' do
