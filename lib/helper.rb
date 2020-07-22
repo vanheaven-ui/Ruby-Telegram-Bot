@@ -21,8 +21,7 @@ class BotHelper
 
       You have officially started our chat.
 
-      Send me any of the remaining commands below and I will reply accordingly.
-      
+      Send me any of the remaining commands below and I will reply accordingly.\n
       /stop - To stop this conversation,
       /verse - To get a special verse
       /news - To get the latest five US news headlines
