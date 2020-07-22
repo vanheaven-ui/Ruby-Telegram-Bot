@@ -61,7 +61,7 @@ class TelegramBot < BotHelper
           chat_id: message.chat.id, text:
           <<~HERE
             Hey "#{user_name}"
-            For me to listen, you have to type 
+            For me to reply, you have to type 
               /commands, /start, /stop, /verse, /news and /help.
             Check your spelling
 
@@ -72,6 +72,3 @@ class TelegramBot < BotHelper
     end
   end
 end
-    
-
-# puts Bot.new.telegram
