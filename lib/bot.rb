@@ -1,3 +1,4 @@
+# rubocop: disable Metrics/BlockLength
 require 'telegram/bot'
 require_relative './helper'
 
@@ -93,3 +94,4 @@ class TelegramBot < BotHelper
     end
   end
 end
+# rubocop: enable Metrics/BlockLength
