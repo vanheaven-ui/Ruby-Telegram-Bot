@@ -20,7 +20,6 @@ This project explores the power of ruby to integrate with the telegram bot API.
 <a href="#usage">Usage</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#testing">Testing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#with">Built With</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#ldl">Live Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#author">Author</a>
 
 
@@ -35,11 +34,6 @@ This project involves building a telegram bot using ruby and the telegram bot AP
 ## 🔧 Tested with<a name = "tested"></a>
   
 - RSpec 3.9
-
-## 🔴 Live Demo <a name = "ldl"></a>
-
-
-[![Run on Repl.it](https://repl.it/badge/github/vanheaven-ui/my_enumerables)](https://repl.it/@vanheavenui/myenumerables-3)
 
 ## Usage <a name = "usage"></a>
 To use the verse&newsbot, follow the steps in this section
