@@ -8,13 +8,6 @@ class BotHelper
     @token = return_token
   end
 
-  def welcome
-    <<~HERE
-      Welcome to verse&newsbot!
-      Please type /commands to get buttons for your commands
-    HERE
-  end
-
   def when_start(user_name)
     <<~HERE
       🤝Hello again, #{user_name}

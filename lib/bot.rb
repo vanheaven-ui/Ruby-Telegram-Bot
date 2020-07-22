@@ -17,7 +17,7 @@ class TelegramBot < BotHelper
   Telegram::Bot::Client.run(token, logger: Logger.new($stderr)) do |bot|
     bot.logger.info("Welcome to verse&newsbot\n\t\tRemember to press Ctrl + C to stop the script")
     bot.listen do |message|
-      user_name = message.from.first_name
+      @user_name = message.from.first_name
       repeat = helper.same_command(message.text)
       again = helper.choose_other(message.text)
       case message.text
@@ -29,12 +29,12 @@ class TelegramBot < BotHelper
           chat_id: message.chat.id, text: commands.to_s, reply_markup: reply_markup
         )
       when '/start'
-        welcome = helper.when_start(user_name)
+        welcome = helper.when_start(@user_name)
         bot.api.send_message(
           chat_id: message.chat.id, text: welcome.to_s, date: message.date
         )
       when '/stop'
-        stop = helper.when_stop(user_name)
+        stop = helper.when_stop(@user_name)
         keyboard = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
         bot.api.send_message(
           chat_id: message.chat.id, text: stop.to_s, date: message.date, reply_markup: keyboard
@@ -82,7 +82,7 @@ class TelegramBot < BotHelper
         bot.api.send_message(
           chat_id: message.chat.id, text:
           <<~HERE
-            🤝Hey "#{user_name}"
+            🤝Hey "#{@user_name}"
             For me to reply, you have to type:
             /commands, /start, /stop, /verse, /news and /help.
 
