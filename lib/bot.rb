@@ -8,17 +8,19 @@ class TelegramBot < BotHelper
   commands = helper.commands
   news = helper.when_news
   verse = helper.when_verse
+  buttons = [
+    ['/start', '/stop'],
+    ['/verse', '/news']
+  ]
 
   Telegram::Bot::Client.run(token, logger: Logger.new($stderr)) do |bot|
     bot.logger.info("Welcome to verse&newsbot\n\t\tRemember to press Ctrl + C to stop the script")
     bot.listen do |message|
       user_name = message.from.first_name
+      repeat = helper.same_command(message.text)
+      again = helper.choose_other(message.text)
       case message.text
       when '/commands'
-        buttons = [
-          ['/start', '/stop'],
-          ['/verse', '/news']
-        ]
         reply_markup = Telegram::Bot::Types::ReplyKeyboardMarkup.new(
           keyboard: buttons, one_time_keyboard: false
         )
@@ -38,12 +40,22 @@ class TelegramBot < BotHelper
         )
       when '/verse'
         scripture = Scripture.new
-        bot.api.send_message(chat_id: message.chat.id, text:
+        bot.api.send_message(
+          chat_id: message.chat.id, text:
           <<~HERE
             #{verse}
             #{scripture.refactor}
           HERE
-                            )
+        )
+        keyboard = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
+        bot.api.send_message(chat_id: message.chat.id, text: repeat.to_s, reply_markup: keyboard)
+        sleep(5)
+        reply_markup = Telegram::Bot::Types::ReplyKeyboardMarkup.new(
+          keyboard: buttons, one_time_keyboard: false
+        )
+        bot.api.send_message(
+          chat_id: message.chat.id, text: again.to_s, reply_markup: reply_markup
+        )
       when '/help'
         bot.api.send_message(chat_id: message.chat.id, text: help.to_s, date: message.date)
       when '/news'
@@ -55,6 +67,16 @@ class TelegramBot < BotHelper
             #{headlines.refactored_news}
           HERE
         )
+        keyboard = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
+        bot.api.send_message(chat_id: message.chat.id, text: repeat.to_s, reply_markup: keyboard)
+        sleep(5)
+        reply_markup = Telegram::Bot::Types::ReplyKeyboardMarkup.new(
+          keyboard: buttons, one_time_keyboard: false
+        )
+        bot.api.send_message(
+          chat_id: message.chat.id, text: again.to_s, reply_markup: reply_markup
+        )
+
       else
         bot.api.send_message(
           chat_id: message.chat.id, text:
