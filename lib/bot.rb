@@ -83,8 +83,9 @@ class TelegramBot < BotHelper
           chat_id: message.chat.id, text:
           <<~HERE
             Hey "#{user_name}"
-            For me to reply, you have to type 
-              /commands, /start, /stop, /verse, /news and /help.
+            For me to reply, you have to type:
+            /commands, /start, /stop, /verse, /news and /help.
+
             Check your spelling
 
             If you type /commands, buttons will be loaded at the bottom for you to choose instead of typing
