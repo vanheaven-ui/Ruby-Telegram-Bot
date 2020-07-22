@@ -19,6 +19,8 @@ class BotHelper
     <<~HERE
       Hello again, #{user_name}
 
+      You have officially started our chat.
+
       Send me any of the remaining commands below and I will reply accordingly.
       
       /stop - To stop this conversation,
@@ -55,9 +57,31 @@ class BotHelper
 
   def when_stop(user_name)
     <<~HERE
-      Bye #{user_name},
+      Bye! #{user_name},
       You have ended our chat
     HERE
+  end
+
+  def same_command(command)
+    <<~HERE
+      Enjoy the #{command.sub('/', '')}?
+      Choose #{command} again for updates or
+      Choose from the rest of the commands below
+    HERE
+  end
+
+  def choose_other(command)
+    if command == '/verse'
+      <<~HERE
+        /news - to get news updates in the US
+        /stop - to end our chat
+      HERE
+    else
+      <<~HERE
+        /verse - to get a bible verse
+        /stop - to end our chat
+      HERE
+    end
   end
 
   private
