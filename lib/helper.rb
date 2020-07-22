@@ -17,7 +17,7 @@ class BotHelper
 
   def when_start(user_name)
     <<~HERE
-      Hello again, #{user_name}
+      🤝Hello again, #{user_name}
 
       You have officially started our chat.
 
@@ -56,7 +56,7 @@ class BotHelper
 
   def when_stop(user_name)
     <<~HERE
-      Bye! #{user_name},
+    👋Bye! #{user_name},
       You have ended our chat
     HERE
   end

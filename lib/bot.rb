@@ -82,7 +82,7 @@ class TelegramBot < BotHelper
         bot.api.send_message(
           chat_id: message.chat.id, text:
           <<~HERE
-            Hey "#{user_name}"
+            🤝Hey "#{user_name}"
             For me to reply, you have to type:
             /commands, /start, /stop, /verse, /news and /help.
 
