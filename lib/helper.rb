@@ -10,7 +10,7 @@ class BotHelper
 
   def when_start(user_name)
     <<~HERE
-      🤝Hello again, #{user_name}
+      🤝Hello, #{user_name}
 
       You have officially started our chat.
 
@@ -18,6 +18,8 @@ class BotHelper
       /stop - To stop this conversation,
       /verse - To get a special verse
       /news - To get the latest five US news headlines
+      /commands - To load buttons for your commands
+      /help - To get guidance about bot
     HERE
   end
 
