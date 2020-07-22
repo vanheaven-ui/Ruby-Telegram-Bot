@@ -83,7 +83,3 @@ class BotHelper
     token
   end
 end
-
-bot = BotHelper.new
-p bot.when_help
-p bot.commands

@@ -26,7 +26,3 @@ class Scripture
     url
   end
 end
-
-# script = Scripture.new
-# p script.return_json
-# p script.refactor
