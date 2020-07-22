@@ -17,7 +17,7 @@ class BotHelper
 
   def when_start(user_name)
     <<~HERE
-      Hello, #{user_name}
+      Hello again, #{user_name}
 
       Send me any of the remaining commands below and I will reply accordingly.
       
