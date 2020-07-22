@@ -45,12 +45,12 @@ First get a copy of project on your computer:
 ### 🛠 Installing <a name = "ins"></a>
 Once you have a local copy of the entire project on your computer, then:
 
-- run bundle install to install the dependencies for the project.
+- run ``bundle install`` in the terminal to install the dependencies for the project.
 
 ### 🛠 Testing <a name = "testing"></a>
 If you like to test the ruby methods used, then:
 
-- run ``rspec -v`` in the terminal to check if the previous ``bundle install`` installed rspec in the Gemfile.
+- run ``rspec -v`` in the terminal to check if the previous ``bundle install`` terminal command installed rspec in the Gemfile.
 - if not, add gem 'rspec' on a new line in the Gemfile and run ``bundle install`` in the terminal again to install rspec.
 - run ``rspec`` in the terminal to test the methods used in this project.
 
@@ -59,7 +59,7 @@ Finally, you can use the verse&newsbot:
 
 - run ``ruby ./bin/script.rb`` in the terminal to execute the ruby script.
 - Open your browser and load this URL https://web.telegram.org/#/im?p=@knowbiblebot.
-- If not, signin to you telegram account and you should be able to chat with the bot.
+- If not, signin to your telegram account and you should be able to chat with the bot.
 
 ## ✒️  Authors <a name = "author"></a>
 
