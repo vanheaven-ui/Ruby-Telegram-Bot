@@ -53,6 +53,13 @@ class BotHelper
     HERE
   end
 
+  def when_stop(user_name)
+    <<~HERE
+      Bye #{user_name},
+      You have ended our chat
+    HERE
+  end
+
   private
 
   def return_token
