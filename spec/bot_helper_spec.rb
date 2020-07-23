@@ -79,7 +79,7 @@ describe BotHelper do
     expected =
       <<~HERE
         Enjoy the verse?
-        Choose /verse again for another verse or
+        Choose /verse again for updates or
         Choose from the rest of the commands
       HERE
     context 'No arguments passed' do
