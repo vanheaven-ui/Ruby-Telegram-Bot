@@ -48,7 +48,7 @@ Once you have a local copy of the entire project on your computer, then:
 - Run ``bundle install`` in the terminal to install the gem dependencies in the Gemfile.
 - Verify that all the gems in the Gemfile have been installed<br/> 
   . Run ``gem info telegram-bot-ruby`` in the terminal to check that this gem is installed<br/>
-  . Run ``gem info net-http-persistent`` in the terminal to check that this gem is istalled
+  . Run ``gem info net-http-persistent`` in the terminal to check that this gem is installed
 
 ### 🛠 Testing <a name = "testing"></a>
 If you like to test the ruby methods used, then:
