@@ -11,7 +11,7 @@ class TelegramBot < BotHelper
   news = helper.when_news
   verse = helper.when_verse
   buttons = [
-    ['/start', '/stop'],
+    ['/help', '/stop'],
     ['/verse', '/news']
   ]
 
@@ -21,6 +21,7 @@ class TelegramBot < BotHelper
       @user_name = message.from.first_name
       repeat = helper.same_command(message.text)
       again = helper.choose_other(message.text)
+
       case message.text
       when '/commands'
         reply_markup = Telegram::Bot::Types::ReplyKeyboardMarkup.new(
@@ -31,23 +32,15 @@ class TelegramBot < BotHelper
         )
       when '/start'
         welcome = helper.when_start(@user_name)
-        bot.api.send_message(
-          chat_id: message.chat.id, text: welcome.to_s, date: message.date
-        )
+        bot.api.send_message(chat_id: message.chat.id, text: welcome.to_s)
       when '/stop'
         stop = helper.when_stop(@user_name)
         keyboard = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
-        bot.api.send_message(
-          chat_id: message.chat.id, text: stop.to_s, date: message.date, reply_markup: keyboard
-        )
+        bot.api.send_message(chat_id: message.chat.id, text: stop.to_s, reply_markup: keyboard)
       when '/verse'
         scripture = Scripture.new
         bot.api.send_message(
-          chat_id: message.chat.id, text:
-          <<~HERE
-            #{verse}
-            #{scripture.refactor}
-          HERE
+          chat_id: message.chat.id, text: "#{verse}\n#{scripture.refactor}"
         )
         keyboard = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
         bot.api.send_message(chat_id: message.chat.id, text: repeat.to_s, reply_markup: keyboard)
@@ -63,11 +56,7 @@ class TelegramBot < BotHelper
       when '/news'
         headlines = Headlines.new
         bot.api.send_message(
-          chat_id: message.chat.id, text:
-          <<~HERE
-            #{news}
-            #{headlines.refactored_news}
-          HERE
+          chat_id: message.chat.id, text: "#{news}\n#{headlines.refactored_news}"
         )
         keyboard = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
         bot.api.send_message(chat_id: message.chat.id, text: repeat.to_s, reply_markup: keyboard)
@@ -80,18 +69,7 @@ class TelegramBot < BotHelper
         )
 
       else
-        bot.api.send_message(
-          chat_id: message.chat.id, text:
-          <<~HERE
-            🤝Hey "#{@user_name}"
-            For me to reply, you have to type:
-            /commands, /start, /stop, /verse, /news and /help.
-
-            Check your spelling
-
-            If you type /commands, buttons will be loaded at the bottom for you to choose instead of typing
-          HERE
-        )
+        bot.api.send_message(chat_id: message.chat.id, text: helper.other_input(@user_name).to_s)
       end
     end
   end

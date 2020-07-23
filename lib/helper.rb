@@ -14,12 +14,7 @@ class BotHelper
 
       You have officially started our chat.
 
-      Send me any of the remaining commands below and I will reply accordingly.\n
-      /stop - To stop this conversation,
-      /verse - To get a special verse
-      /news - To get the latest five US news headlines
-      /commands - To load buttons for your commands
-      /help - To get guidance about bot
+      Type /commands so that I can load a keyboard of the commands for you to choose from.
     HERE
   end
 
@@ -33,19 +28,18 @@ class BotHelper
 
   def when_help
     <<~HERE
-      I am a bot that is here to take your commands and give you bible verses and the latest US news headlines alike.
+      I am a bot that is here to give you bible verses and the latest US news headlines alike.
       #{commands}
     HERE
   end
 
   def commands
     <<~HERE
-      Please choose any of these commands from the buttons at the bottom or type them to control me
-      **Better to start with /start**\n
-      /start - start conversation with me
-      /stop - stop conversation with me
+      To control me, please choose any of these commands from the buttons at the bottom or type the commands.\n
       /verse - choose this and I will reply with a bible verse
       /news - choose this and I will reply with the latest 5 US news headlines
+      /help - Get guidance
+      /stop - stop conversation with me
     HERE
   end
 
@@ -76,6 +70,18 @@ class BotHelper
         /stop - to end our chat
       HERE
     end
+  end
+
+  def other_input(user_name)
+    <<~HERE
+      🤝Hey "#{user_name}"
+      For me to reply, you have to type:
+      /commands, /start, /stop, /verse, /news and /help.
+
+      Check your spelling
+
+      If you type /commands, buttons will be loaded at the bottom for you to choose instead of typing
+    HERE
   end
 
   private
