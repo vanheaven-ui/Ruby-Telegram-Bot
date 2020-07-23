@@ -80,7 +80,7 @@ describe BotHelper do
       <<~HERE
         Enjoy the verse?
         Choose /verse again for another verse or
-        Choose from the rest of the commands below
+        Choose from the rest of the commands
       HERE
     context 'No arguments passed' do
       it 'raises ArgumentError' do
@@ -100,11 +100,13 @@ describe BotHelper do
       <<~HERE
         /news - to get news updates in the US
         /stop - to end our chat
+        /help - get guidance
       HERE
     expected_n =
       <<~HERE
         /verse - to get a bible verse
         /stop - to end our chat
+        /help - get guidance
       HERE
     context 'No arguments passed' do
       it 'raises ArgumentError' do

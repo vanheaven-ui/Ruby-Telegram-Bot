@@ -3,11 +3,6 @@ require_relative 'scripture'
 require_relative './news'
 
 class BotHelper
-  attr_reader :token
-  def initialize
-    @token = return_token
-  end
-
   def when_start(user_name)
     <<~HERE
       🤝Hello, #{user_name}
@@ -54,7 +49,7 @@ class BotHelper
     <<~HERE
       Enjoy the #{command.sub('/', '')}?
       Choose #{command} again for another verse or
-      Choose from the rest of the commands below
+      Choose from the rest of the commands
     HERE
   end
 
@@ -63,11 +58,13 @@ class BotHelper
       <<~HERE
         /news - to get news updates in the US
         /stop - to end our chat
+        /help - get guidance
       HERE
     else
       <<~HERE
         /verse - to get a bible verse
         /stop - to end our chat
+        /help - get guidance
       HERE
     end
   end
@@ -82,12 +79,5 @@ class BotHelper
 
       If you type /commands, buttons will be loaded at the bottom for you to choose instead of typing
     HERE
-  end
-
-  private
-
-  def return_token
-    token = '1133743218:AAGsAzAT0PRHuBgmPkPtLmv4QuRMSWNCrws'
-    token
   end
 end
