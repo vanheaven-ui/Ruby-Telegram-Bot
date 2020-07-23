@@ -5,10 +5,8 @@ describe BotHelper do
   describe '#when_start' do
     expected =
       <<~HERE
-        🤝Hello, Vanheaven
-        
-        You have officially started our chat.
-
+        🤝Hello, Vanheaven\n
+        You have officially started our chat.\n
         Type /commands so that I can load a keyboard of the commands for you to choose from.
       HERE
     context 'no argument given' do
