@@ -63,8 +63,8 @@ Finally, you can use the verse&newsbot:
 - run ``ruby ./bin/script.rb`` in the terminal to execute the ruby script.
 - Open your browser and load this URL https://web.telegram.org/#/im?p=@knowbiblebot.
 - If not, signin to your telegram account and you should be able to chat with the bot.<br/>
-**Alternatively:** You can signin to your telegram account and type ``@knowbiblebot`` in the search area.
- instead of loading the above URL
+
+**Alternatively:** After running the ```ruby ./bin/script.rb``, you can signin to your telegram account and type ``@knowbiblebot`` in the search area. instead of loading the above URL. 
 
 ## ✒️  Authors <a name = "author"></a>
 
