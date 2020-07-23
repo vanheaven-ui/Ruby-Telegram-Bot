@@ -45,7 +45,10 @@ First get a copy of project on your computer:
 ### 🛠 Installing <a name = "ins"></a>
 Once you have a local copy of the entire project on your computer, then:
 
-- run ``bundle install`` in the terminal to install the dependencies for the project.
+- Run ``bundle install`` in the terminal to install the gem dependencies in the Gemfile.
+- Verify that all the gems in the Gemfile have been installed 
+  . Run ``gem info telegram-bot-ruby`` in the terminal to check that this gem is installed
+  . Run ``gem info het-http-persistent`` in the terminal to check that this gem is istalled
 
 ### 🛠 Testing <a name = "testing"></a>
 If you like to test the ruby methods used, then:
@@ -59,7 +62,9 @@ Finally, you can use the verse&newsbot:
 
 - run ``ruby ./bin/script.rb`` in the terminal to execute the ruby script.
 - Open your browser and load this URL https://web.telegram.org/#/im?p=@knowbiblebot.
-- If not, signin to your telegram account and you should be able to chat with the bot.
+- If not, signin to your telegram account and you should be able to chat with the bot.<br/>
+**Alternatively:** You can signin to your telegram account and type ``@knowbiblebot`` in the search area.
+ instead of loading the above URL
 
 ## ✒️  Authors <a name = "author"></a>
 
