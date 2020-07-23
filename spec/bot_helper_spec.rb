@@ -7,7 +7,7 @@ describe BotHelper do
       <<~HERE
         🤝Hello, Vanheaven\n
         You have officially started our chat.\n
-        Type /commands so that I can load a keyboard of the commands for you to choose from.
+        Type or click 👉/commands so that I can load a keyboard of the commands for you to choose from.
       HERE
     context 'no argument given' do
       it 'raises ArgumentError' do

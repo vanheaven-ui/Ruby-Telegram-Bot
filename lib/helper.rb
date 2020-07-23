@@ -9,7 +9,7 @@ class BotHelper
 
       You have officially started our chat.
 
-      Type /commands so that I can load a keyboard of the commands for you to choose from.
+      Type or click 👉/commands so that I can load a keyboard of the commands for you to choose from.
     HERE
   end
 
@@ -48,7 +48,7 @@ class BotHelper
   def same_command(command)
     <<~HERE
       Enjoy the #{command.sub('/', '')}?
-      Choose #{command} again for another verse or
+      Choose #{command} again for updates or
       Choose from the rest of the commands
     HERE
   end
@@ -72,7 +72,7 @@ class BotHelper
   def other_input(user_name)
     <<~HERE
       🤝Hey "#{user_name}"
-      For me to reply, you have to type:
+      For me to reply, you have to type: or click 👇:
       /commands, /start, /stop, /verse, /news and /help.
 
       Check your spelling
