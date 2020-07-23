@@ -5,7 +5,7 @@ describe BotHelper do
   describe '#when_start' do
     expected =
       <<~HERE
-        🤝Hello, #{user_name}
+        🤝Hello, Vanheaven
 
         You have officially started our chat.
 
