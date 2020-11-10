@@ -1,1 +1,1 @@
-bot: ruby /bin/script.rb
+bot: ruby ./bin/script.rb
