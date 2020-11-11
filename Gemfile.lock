@@ -12,6 +12,7 @@ GEM
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.4.4)
+    dotenv (2.7.6)
     equalizer (0.0.11)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
@@ -64,6 +65,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  dotenv
   net-http-persistent
   rspec
   rubocop (~> 0.81.0)
