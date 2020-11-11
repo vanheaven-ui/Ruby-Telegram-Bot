@@ -72,7 +72,7 @@ class BotHelper
   def other_input(user_name)
     <<~HERE
       🤝Hey "#{user_name}"
-      For me to reply, you have to type: or click 👇:
+      For me to reply accordingly, you have to type: or click 👇:
       /commands, /start, /stop, /verse, /news and /help.
 
       Check your spelling

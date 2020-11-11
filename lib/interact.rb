@@ -1,17 +1,9 @@
 require_relative './helper'
 require_relative './scripture'
 require_relative './news'
-require 'dotenv'
-
-Dotenv.load
 
 class Interaction < BotHelper
-  attr_reader :token
-  def initialize
-    @token = ENV['TOKEN']
-  end
-
-  def chat_wrapper(msg, user_name)
+   def chat_wrapper(msg, user_name)
     case msg
     when '/start'
       when_start(user_name)

@@ -1,11 +1,12 @@
 # rubocop: disable Metrics/BlockLength
 require 'telegram/bot'
 require_relative './interact'
+require_relative 'config/keys'
 
 class TelegramBot < Interaction
   attr_reader :user_name
   interact = Interaction.new
-  token = interact.token
+  token = ApiKey::TOKEN
   buttons = [
     ['/help', '/stop'],
     ['/verse', '/news']
