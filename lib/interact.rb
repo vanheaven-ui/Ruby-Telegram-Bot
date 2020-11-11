@@ -1,12 +1,12 @@
 require_relative './helper'
 require_relative './scripture'
 require_relative './news'
-require_relative '../env/key'
+require 'dotenv/load'
 
 class Interaction < BotHelper
   attr_reader :token
   def initialize
-    @token = ApiKey.new.return_key
+    @token = ENV['TOKEN']
   end
 
   def chat_wrapper(msg, user_name)
