@@ -1,7 +1,9 @@
 require_relative './helper'
 require_relative './scripture'
 require_relative './news'
-require 'dotenv/load'
+require 'dotenv'
+
+Dotenv.load
 
 class Interaction < BotHelper
   attr_reader :token
