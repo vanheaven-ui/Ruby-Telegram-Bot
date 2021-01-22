@@ -1,6 +1,6 @@
 # Ruby Telegram Bot (verse&newsbot)
 
-This project explores the power of ruby to integrate with the telegram bot API.
+This project explores the power of Ruby to integrate with the Telegram Bot API.
   
 [![View Code](https://img.shields.io/badge/View%20-Code-green)](https://github.com/vanheaven-ui/ruby-telegram-bot/tree/develop)
 [![Github Issues](https://img.shields.io/badge/GitHub-Issues-orange)](https://github.com/vanheaven-ui/ruby-telegram-bot/issues)
@@ -24,14 +24,14 @@ This project explores the power of ruby to integrate with the telegram bot API.
 
 
 ## About <a name = "about"></a>
-This project involves building a telegram bot using ruby and the telegram bot API wrapper. Ruby classes and methods are used to create bot functionality while the ``ruby telegram bot API wrapper gem`` is used to connect to the telegram bot API. The ``net-http-persistent gem`` is used to connect to other external APIs. The telegram bot built in this repository provides random bible verses and the latest real time news headlines in the US.
-## 🔧 Built with<a name = "with"></a>
+This project involves building a Telegram bot using Ruby and the Telegram bot API wrapper. Ruby classes and methods are used to create bot functionality while the ``ruby telegram bot API wrapper gem`` is used to connect to the telegram bot API. The ``net-http-persistent gem`` is used to connect to other external APIs. The telegram bot built in this repository provides random bible verses and the latest real time news headlines in the US.
+## 🔧 Built With<a name = "with"></a>
 
 - Ruby 2.6.6
 - Telegram Bot API - ``telegram-bot-ruby (0.12.0)``
 - net/http - ``net-http-persistent (4.0.0, 2.9.4)``
 
-## 🔧 Tested with<a name = "tested"></a>
+## 🔧 Tested With<a name = "tested"></a>
   
 - RSpec 3.9
 
