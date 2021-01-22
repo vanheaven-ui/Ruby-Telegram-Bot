@@ -3,7 +3,7 @@ require_relative './scripture'
 require_relative './news'
 
 class Interaction < BotHelper
-   def chat_wrapper(msg, user_name)
+  def chat_wrapper(msg, user_name)
     case msg
     when '/start'
       when_start(user_name)
