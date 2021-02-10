@@ -24,7 +24,7 @@ This project explores the power of Ruby to integrate with the Telegram Bot API.
 
 
 ## About <a name = "about"></a>
-This project involves building a Telegram bot using Ruby and the Telegram bot API wrapper. Ruby classes and methods are used to create bot functionality while the ``ruby telegram bot API wrapper gem`` is used to connect to the telegram bot API. The ``net-http-persistent gem`` is used to connect to other external APIs. The Telegram bot built in this repository provides random bible verses and the latest real time news headlines in the US.
+This project involves building a Telegram bot using Ruby and the Telegram bot API wrapper. Ruby classes and methods are used to create bot functionality while the ``Ruby Telegram bot API wrapper gem`` is used to connect to the telegram bot API. The ``net-http-persistent gem`` is used to connect to other external APIs. The Telegram bot built in this repository provides random bible verses and the latest real time news headlines in the US.
 ## 🔧 Built With<a name = "with"></a>
 
 - Ruby 2.6.6
